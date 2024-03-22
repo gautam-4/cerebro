@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
+@import url("sections/header.css");
+@import url("sections/main.css");
+
+:root {
+  --font-one: monospace;
+  --font-two: "Plus Jakarta Sans", sans-serif;
+  --font-three: cursive;
+  --primary-color: #435585;
+  --box-shadow-color: 2px 2px 2px 2px rgba(123, 144, 169, 0.427);
+  --secondary-color: rgba(255, 255, 255, 0.107);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0 auto;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-family: var(--font-two);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+button{
+  cursor: pointer;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  font-size: 50px;
+  font-weight: 600;
+  font-family: var(--font-two);
+  color: #fff;
+  margin-top: 16px;
+}
+
+::-webkit-scrollbar {
+  width: 11px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary-color);
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.091); 
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.187);
+}
+
+@media screen and (min-height: 900px){
+  .expense-tracker{
+    height: 487px;
+  }
+  .pomodoro{
+    height: calc(100vh - 590px);
+    justify-content: space-between;
+  }
+}
+@media screen and (min-height: 1000px) {
+  .pomodoro-timer{
+    font-size: 18vh;
+  }
+  .expense-tracker_total{
+    font-size: 9vh;
+  }
+}
+
+@media screen and (max-width: 1524px){
+  .expense_history-cell{
+    justify-content: space-evenly;
+  }
+}
+
+
+@media screen and (max-width: 540px){
+  main{
+    width: 100vw;
+    overflow: hidden;
+  }
+  .habits, .note{
+    width: calc(95vw);
+  }
+  .todo{
+    width: calc(85vw);
+  }
+  .habit-name, .todo-name{
+    font-size: 18px;
+    width: 150px;
+  }
+  .habits_content-cell-inner, .todo_content-cell-inner{
+    height: 60px;
+  }
+  .habits_content-cell-delete{
+    height: 15px;
+    width: 15px;
+  }
+  .btn-div-left, .btn-div-right{
+    height: 60px;
+    width: 60px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-div-left button, .btn-div-right button{
+    height: 50px;
+    width: 50px;
+  }
+  .pomodoro-timer{
+    font-size: 80px;
+  }
+  .expense_add{
+    flex-direction: column;
+  }
+  .expense_history{
+    display:none;
+  }
+  .navbar_logout-btn span{
+    display: none;
+  }
+}
