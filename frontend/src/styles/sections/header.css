@@ -13,7 +13,6 @@
 }
 
 .navbar_logout-btn{
-    background-color: rgba(239, 75, 75, 0.75);
     border: 0;
     border-radius: 10px;
     padding: 4px 12px;
@@ -21,6 +20,15 @@
     font-weight: bold;
     font-size: 15px;
 }
-.navbar_logout-btn:hover{
+.navbar-btn-red{
+    background-color: rgba(239, 75, 75, 0.75);
+}
+.navbar-btn-red:hover{
     background-color: rgba(239, 75, 75, 0.81);
+}
+.navbar-btn-green{
+    background-color: rgba(79, 186, 40, 0.516);
+}
+.navbar-btn-green:hover{
+    background-color: rgba(64, 156, 30, 0.345);
 }

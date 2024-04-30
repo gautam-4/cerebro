@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import axios from 'axios';
 import deleteIcon from '../assets/delete-icon.svg'
 import tickIcon from '../assets/tick-icon2.svg'
 

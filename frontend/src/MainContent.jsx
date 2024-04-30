@@ -14,7 +14,7 @@ function MainContent() {
             </section>
 
             <section className="section-two">
-                <Todo />
+                <Todo/>
                 <Progress />
             </section>
 
