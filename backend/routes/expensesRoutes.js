@@ -2,16 +2,16 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/user');
 
-router.post('/expenses/:username/:name', async (req, res) => {
+router.post('/expenses/:username/:name/:price', async (req, res) => {
     try {
-        const { username, name } = req.body;
+        const { username, name, price } = req.params;
 
         const user = await User.findOne({ username });
         if (!user) {
             return res.status(404).json({ error: 'User not found' });
         }
 
-        user.expenses.push({ name });
+        user.expenses.push({ name: name, price:parseInt(price) });
         await user.save();
 
         res.status(201).json({ message: 'Expense added successfully' });
