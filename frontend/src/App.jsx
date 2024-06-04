@@ -9,9 +9,14 @@ import LandingPage from './LandingPage';
 function App() {
   return (
     <>
-
-          <><Header isLoggedIn = {true}/><MainContent /></>
-    
+      <BrowserRouter>
+        <Routes>
+        <Route path='/' element={<><Header isLoggedIn = {false}/><LandingPage/><Register/></>}></Route>
+          <Route path='/login' element={<><Header isLoggedIn = {false}/><Login /></>}></Route>
+          <Route path='/register' element={<><Header isLoggedIn = {false}/><Register/></>}></Route>
+          <Route path='/home' element={<><Header isLoggedIn = {true}/><MainContent /></>}></Route>
+        </Routes>
+      </BrowserRouter>
 
     </>
   )
