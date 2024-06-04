@@ -3,8 +3,6 @@ import { useNavigate } from 'react-router-dom';
 
 const Header = (props) => {
 
-    const navigate = useNavigate();
-
     function handleNavLogin(isLoggedIn){
         if(isLoggedIn){
             navigate('/')
